@@ -1,0 +1,77 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Page background */
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #4e73df, #1cc88a);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Page heading */
+h1 {
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: 32px;
+}
+
+/* Form container */
+form {
+    background-color: #ffffff;
+    padding: 25px 30px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Input and textarea fields */
+input,
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+/* Textarea resize control */
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Focus effect */
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #4e73df;
+    box-shadow: 0 0 4px rgba(78, 115, 223, 0.4);
+}
+
+/* Submit button */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4e73df;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #2e59d9;
+}
