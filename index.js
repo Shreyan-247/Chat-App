@@ -39,7 +39,7 @@ app.get("/chats/new",(req,res)=>{
     res.render("new.ejs");
 });
 
-app.post("/chats",(req,res)=>{
+app.post("/chats",async(req,res)=>{
     let {from,to,msg}=req.body;
     let chat1=new Chat({
         from: from,
@@ -47,7 +47,7 @@ app.post("/chats",(req,res)=>{
         msg: msg,
         created_at: new Date(),
     });
-    chat1.save();
+    await chat1.save();
     res.redirect("/chats");
 });
 app.get("/chats/:id/edit",async(req,res)=>{
@@ -66,5 +66,6 @@ app.delete("/chats/:id",async(req,res)=>{
     await Chat.deleteOne({_id:id});
     res.redirect("/chats");
 });
+
 
 
