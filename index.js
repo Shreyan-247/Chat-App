@@ -27,7 +27,7 @@ app.listen(port,()=> {
 });
 
 app.get("/",(req,res)=>{
-    res.send("Working");
+    res.redirect("/chats");
 });
 
 app.get("/chats",async(req,res)=>{
@@ -66,4 +66,5 @@ app.delete("/chats/:id",async(req,res)=>{
     await Chat.deleteOne({_id:id});
     res.redirect("/chats");
 });
+
 
